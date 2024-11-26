@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <div class="profile-container">
+        <div class="profile-container">
+            <h1>Welcome to the Complaint Portal</h1>
+            <form id="complaint-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+    
+                <label for="area">Your Area:</label>
+                <input type="text" id="area" placeholder="Enter your area" required>
+    
+                <label for="complaint">Complaint Description:</label>
+                <textarea id="complaint" placeholder="Enter your complaint" required></textarea>
+    
+                <button type="submit">Submit Complaint</button>
+            </form>
+        <ul id="driver-list">
+            <!-- Example driver list -->
+            <li onclick="openRequestModal('Mike Johnson - Route 12')">Mike Johnson - Route 12</li>
+            <li onclick="openRequestModal('Sarah Connor - Route 18')">Sarah Connor - Route 18</li>
+            <li onclick="openRequestModal('Jake Parker - Route 5')">Jake Parker - Route 5</li>
+        </ul>
+    </div>
+
+    <!-- Request Modal -->
+    <div id="request-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRequestModal()">&times;</span>
+            <h2>Submit Request</h2>
+            <p>Driver: <span id="selected-driver"></span></p>
+            <textarea id="request" placeholder="Type your request here"></textarea>
+            <button onclick="sendRequest()">Submit Request</button>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</center>
+</body>
+</html>

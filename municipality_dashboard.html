@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Office</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1 id="welcome-message"></h1>
+
+        <!-- Complaints Section -->
+        <h2>Complaints</h2>
+        <table id="complaints-table">
+            <thead>
+                <tr>
+                    <th>Complaint ID</th>
+                    <th>User Name</th>
+                    <th>Location</th>
+                    <th>Request</th>
+                    <th>Status</th>
+                    <th>Communicate</th>
+                    <th>Assign Work</th>
+                </tr>
+            </thead>
+            <tbody id="complaints"></tbody>
+        </table>
+
+        <!-- Drivers Section -->
+        <h2>Trash Truck Drivers</h2>
+        <table id="drivers-table">
+            <thead>
+                <tr>
+                    <th>Driver Name</th>
+                    <th>Route</th>
+                    <th>Assign Work</th>
+                </tr>
+            </thead>
+            <tbody id="drivers"></tbody>
+        </table>
+
+        <!-- Communicate Section -->
+        <h2>Communicate with User</h2>
+        <form id="communication-form">
+            <label for="complaint-id">Complaint ID:</label>
+            <input type="text" id="complaint-id" placeholder="Enter Complaint ID" required>
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Type your message to the user" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script src="municipality_dashbaord.js"></script>
+</body>
+</html>

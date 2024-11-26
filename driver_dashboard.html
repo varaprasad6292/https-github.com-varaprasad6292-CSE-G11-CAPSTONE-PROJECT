@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <h1>Driver Dashboard</h1>
+        <p><strong>Driver Name:</strong> <span id="driver-name"></span></p>
+        <p><strong>Vehicle Number:</strong> <span id="vehicle-number"></span></p>
+        <p><strong>Assigned Area:</strong> <span id="assigned-area"></span></p>
+        <button id="toggle-schedule" onclick="toggleSchedule()">Show Schedule</button>
+
+        <div id="schedule-container" style="display: none;">
+            <h2>Work Schedule</h2>
+            <table id="work-schedule">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Assigned Route</th>
+                        <th>Complaint ID</th>
+                    </tr>
+                </thead>
+                <tbody id="work-schedule-body">
+                    <!-- Dynamic rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <h2>Complaints</h2>
+        <table id="complaints-table">
+            <thead>
+                <tr>
+                    <th>Complaint ID</th>
+                    <th>User Name</th>
+                    <th>Location</th>
+                    <th>Request</th>
+                    <th>Assign to Driver</th>
+                </tr>
+            </thead>
+            <tbody id="complaints"></tbody>
+        </table>
+
+        <button onclick="updateWorkStatus()">Update Work Status</button>
+    </center>
+    <script src="driver_dashboard.js"></script>
+</body>
+</html>
